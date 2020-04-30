@@ -4,6 +4,17 @@ const cors = require('cors');
 let mysql = require('mysql');
 let app = express();
 
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "123456789"
+});
+
+con.connect(function (err) {
+    if (err) throw err;
+    console.log("DB Connected!");
+});
+
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
