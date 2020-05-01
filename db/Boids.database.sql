@@ -36,7 +36,7 @@ CREATE TABLE Chat_Channels (
     FOREIGN KEY (server_id) REFERENCES Chat_Servers(id)
 );
 
-Chat_Channels_Posts (
+CREATE TABLE Chat_Channels_Posts (
     id int NOT NULL UNIQUE AUTO_INCREMENT,
     channel_id int NOT NULL,
     user_id int NOT NULL,
@@ -47,4 +47,16 @@ Chat_Channels_Posts (
     PRIMARY KEY (id),
     FOREIGN KEY (channel_id) REFERENCES Chat_Channels(id)
     FOREIGN KEY (user_id) REFERENCES Users(id)
-)
+);
+
+CREATE TABLE Chat_Posts_Comments (
+    id int NOT NULL UNIQUE AUTO_INCREMENT,
+    user_id int NOT NULL,
+    channel_id int NOT NULL,
+    comment varchar(250),
+    createdAt DATE,
+    updatedAt DATE,
+    PRIMARY KEY (id)
+    FOREIGN KEY (user_id) REFERENCES Users(id),
+    FOREIGN KEY (channel_id) REFERENCES Chat_Channels(id)
+);
