@@ -35,3 +35,16 @@ CREATE TABLE Chat_Channels (
     PRIMARY KEY (id),
     FOREIGN KEY (server_id) REFERENCES Chat_Servers(id)
 );
+
+Chat_Channels_Posts (
+    id int NOT NULL UNIQUE AUTO_INCREMENT,
+    channel_id int NOT NULL,
+    user_id int NOT NULL,
+    post varchar(250) NOT NULL,
+    isHidden BOOLEAN,
+    createdAt DATE,
+    updatedAt Date,
+    PRIMARY KEY (id),
+    FOREIGN KEY (channel_id) REFERENCES Chat_Channels(id)
+    FOREIGN KEY (user_id) REFERENCES Users(id)
+)
