@@ -1,0 +1,33 @@
+{
+  "name": "boids",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "server-dev": "nodemon index.js",
+    "client-dev": "npm run start --prefix client",
+    "dev": "concurrently --kill-others-on-fail \"npm run server-dev\" \"npm run client-dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-amine-aouini/Boids.git"
+  },
+  "author": "Amine M. Aoiuini\u001b[D\u001b[D\u001b[D\u001b[\u001b[\u001b[C\u001b[C\u001b[C\u001buini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-amine-aouini/Boids/issues"
+  },
+  "homepage": "https://github.com/m-amine-aouini/Boids#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3"
+  }
+}
