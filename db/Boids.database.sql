@@ -16,3 +16,11 @@ CREATE TABLE Users (
     createdAt Date,
     PRIMARY KEY (id)
 );
+
+CREATE TABLE Chat_Servers (
+    id int NOT NULL UNIQUE AUTO_INCREMENT,
+    Chat_Server_Leader_id int NOT NULL,
+    name varchar(50) NOT NULL,
+    createdAt DATE,
+    PRIMARY KEY (id)
+);
