@@ -25,7 +25,7 @@ npm run dev
 
 *it will run server on port 5000 and react on virtual dom in port 3000 on the same time*
 
-# Auther
+# Author
 
 ## Amine M. Aouini
 
