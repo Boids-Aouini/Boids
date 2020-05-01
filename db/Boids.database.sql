@@ -25,3 +25,13 @@ CREATE TABLE Chat_Servers (
     PRIMARY KEY (id),
     FOREIGN KEY (leader_id) REFERENCES Users(id)
 );
+
+CREATE TABLE Chat_Channels (
+    id int NOT NULL UNIQUE AUTO_INCREMENT,
+    server_id int NOT NULL,
+    name varchar(20) NOT NULL,
+    createdAt DATE,
+
+    PRIMARY KEY (id),
+    FOREIGN KEY (server_id) REFERENCES Chat_Servers(id)
+);
