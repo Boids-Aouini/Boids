@@ -1,0 +1,4 @@
+CREATE DATABASE Boids;
+
+USE Boids;
+
