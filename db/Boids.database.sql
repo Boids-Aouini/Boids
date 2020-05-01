@@ -60,3 +60,14 @@ CREATE TABLE Chat_Posts_Comments (
     FOREIGN KEY (user_id) REFERENCES Users(id),
     FOREIGN KEY (channel_id) REFERENCES Chat_Channels(id)
 );
+
+CREATE TABLE Direct_Messages (
+    id int NOT NULL UNIQUE AUTO_INCREMENT,
+    receiver_id int NOT NULL,
+    sender_id int NOT NULL,
+    message varchar(250) NOT NULL,
+    createdAt DATE,
+    PRIMARY KEY (id),
+    FOREIGN KEY (receiver_id) REFERENCES Users (id),
+    FOREIGN KEY (sender_id) REFERENCES Users (id)
+);
