@@ -22,5 +22,6 @@ CREATE TABLE Chat_Servers (
     Chat_Server_Leader_id int NOT NULL,
     name varchar(50) NOT NULL,
     createdAt DATE,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    FOREIGN KEY (Chat_Server_Leader_id) REFERENCES Users(id)
 );
